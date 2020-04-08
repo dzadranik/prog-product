@@ -1,0 +1,60 @@
+@mixin header-height {
+	height: 55px;
+}
+
+.header-links {
+	@include header-height;
+	background: $orange-color;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	border-radius: 10px;
+	padding-left: 10px;
+	&__link {
+		@include header-height;
+		border-right: 1px solid #ff743d;
+		border-bottom: 3px solid #c44411;
+		white-space: nowrap;
+		&:hover {
+			background: #ff743d;
+			border-bottom-color: #ff743d;
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+	a {
+		@include header-height;
+		color: $white-color;
+		font-size: 12px;
+		line-height: 16px;
+		text-decoration: none;
+		display: block;
+		padding: 10px 8px;
+	}
+	&__more-right,
+	&__more-left {
+		width: 15px;
+		justify-content: center;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		border: none;
+		position: absolute;
+		top: 0;
+		height: 100%;
+	}
+	&__more-right {
+		border-radius: 0 10px 10px 0;
+		background: #d94206;
+		right: 0;
+	}
+	&__more-left {
+		border-radius: 10px 0 0 10px;
+		background: $orange-color;
+		left: 0;
+		border-bottom: 3px solid #d94206;
+	}
+}

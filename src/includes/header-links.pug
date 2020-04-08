@@ -1,0 +1,7 @@
+.header-links
+    button.header-links__more-left
+    each link in headerLinks
+        .header-links__link
+            a(href="/") !{link}
+    button.header-links__more-right
+        include svg-icon/right-arrow.svg

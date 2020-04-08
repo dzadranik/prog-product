@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        title Prog product
+        link(rel='stylesheet' href='css/styles.css')
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+        script(src="js/responsiveCarousel.min.js")
+    block variables
+        -   
+            topLinks = ["Оплата и доставка", "Гарантии и возврат", "Сотрудничество", "Услуги", "Решения", "Техподдержка", "Контакты"]
+            headerLinks = ["VOIP<br/> ОБОРУДОВАНИЕ", "SKYPE<br/> ОБОРУДОВАНИЕ", "GSM<br/> ОБОРУДОВАНИЕ", "ВИДЕО-<br/> ОБОРУДОВАНИЕ", "РАДИО И DECT<br/> ТЕЛЕФОНЫ", "ГАРНИТУРЫ", "ЭЛЕКТРОННЫЕ<br/> ЗАМКИ", "ДОМОФОННЫЕ<br/> СИСТЕМЫ", "СИСТЕМЫ ЗАПИСИ<br/> ТЕЛЕФОННЫХ РАЗГОВОРОВ", "СЕТЕВОЕ<br/> ОБОРУДОВАНИЕ"]
+    body
+        .top-panel
+            nav.top-panel__links
+                .top-panel__link
+                    a(href="/") Каталог
+                    span.top-panel__link-icon
+                        include includes/svg-icon/top-panel-bottom-arrow.svg
+                    .top-panel__sub-links
+                        each link in topLinks
+                            .top-panel__sub-link
+                                a(href="/") #{link}        
+                .top-panel__link
+                    a(href="/") О компании
+                    span.top-panel__link-icon
+                        include includes/svg-icon/top-panel-bottom-arrow.svg
+                    .top-panel__sub-links
+                        each link in topLinks
+                            .top-panel__sub-link
+                                a(href="/") #{link}  
+                each link in topLinks
+                    .top-panel__link
+                        a(href="/") #{link}
+        .wrapper
+            include includes/header.pug
+
+            include includes/header-links.pug
+            main.main
+                include includes/news.pug
+                include includes/banner.pug
+        
+        script(src="js/scripts.min.js")

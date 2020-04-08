@@ -1,0 +1,194 @@
+@mixin border-bottom-dotted {
+	border-bottom: 1px dotted $blue-color;
+}
+
+$blue-color: $blue-color;
+
+.header {
+	padding: 15px 0;
+	display: grid;
+	grid-template-columns: 208px auto auto 208px;
+	grid-template-areas:
+		'region . . cabinet'
+		'logo contacts voip basket';
+	@media all and (max-width: 1150px) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			'region cabinet'
+			'logo contacts'
+			' voip basket';
+	}
+}
+
+.header-region {
+	grid-area: region;
+	&__choose {
+		@include border-bottom-dotted;
+		background: transparent;
+		border-left: none;
+		border-right: none;
+		border-top: none;
+		color: $blue-color;
+		padding: 0;
+		margin-left: 10px;
+	}
+}
+
+.header-to-cabinet {
+	grid-area: cabinet;
+	text-align: right;
+	a {
+		text-decoration: none;
+		color: $blue-color;
+		margin-left: 20px;
+		border-bottom: 1px solid $blue-color;
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+}
+
+.header__logo {
+	grid-area: logo;
+	height: 63px;
+	width: 198px;
+	background: url(../images/logo.png) no-repeat 0 0;
+	background-size: contain;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.header-contacts {
+	grid-area: contacts;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	&__call-back {
+		padding: 14px 25px 0 10px;
+		width: 120px;
+		height: 65px;
+		box-sizing: border-box;
+		text-align: center;
+		margin-right: 10px;
+		background: url(/images/call-back-back.svg) no-repeat;
+		background-size: 100% auto;
+	}
+	&__link {
+		@include border-bottom-dotted;
+		@include roboto;
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height: 16px;
+		color: $blue-color;
+		text-decoration: none;
+	}
+	&__phone {
+		@include roboto;
+		font-size: 22px;
+		line-height: 20px;
+		margin-bottom: 10px;
+	}
+	&__information {
+		line-height: 20px;
+	}
+	&__messengers {
+		display: flex;
+		align-items: center;
+	}
+	&__icons {
+		display: inline-block;
+		width: 35px;
+		height: 18px;
+		margin-right: 5px;
+		background: url(/images/header-contacts-icon.png) no-repeat 0 0;
+	}
+}
+
+.header-voip {
+	grid-area: voip;
+	&__header {
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+	&__title {
+		font-style: italic;
+		font-size: 16px;
+		line-height: 18px;
+		margin-left: 5px;
+		&--orange {
+			@include roboto;
+			color: $orange-color;
+		}
+	}
+	&__search {
+		width: 230px;
+		padding: 3px;
+		box-sizing: border-box;
+		background: #eff0f4;
+		display: flex;
+		justify-content: space-between;
+		border-radius: 4px;
+	}
+	&__search-input {
+		background: transparent;
+		border: none;
+		margin-left: 10px;
+	}
+	&__search-button {
+		border: none;
+		background: $orange-color;
+		color: $white-color;
+		padding: 5px 8px;
+		border-radius: 4px;
+	}
+}
+
+.header-basket {
+	grid-area: basket;
+	padding-top: 15px;
+	&__setting {
+		display: flex;
+		width: 195px;
+		height: 52px;
+		justify-content: flex-start;
+		padding-left: 20px;
+		align-items: center;
+		background: url(../images/basket.png) no-repeat;
+		margin-bottom: 5px;
+		text-decoration: none;
+		color: $default-color;
+	}
+	&__icon {
+		margin-right: 10px;
+	}
+	&__title {
+		@include roboto;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+	&__amount {
+		color: $blue-color;
+		text-decoration: underline;
+	}
+	&__more-setting {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	&__more-setting-link {
+		@include border-bottom-dotted;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+	}
+	&__more-setting-title {
+		margin: 0 5px;
+		font-size: 11px;
+		color: #363c3e;
+	}
+	&__more-setting-count {
+		color: $blue-color;
+	}
+}

@@ -1,0 +1,48 @@
+.header
+    .header-region  Ваш регион:
+        button.header-region__choose Москва
+    .header-to-cabinet
+        a(href="/") Войти
+        a(href="/") Личный кабинет
+    a(href="/").header__logo
+    .header-contacts
+        .header-contacts__call-back 
+            a(href="/").header-contacts__link Обратный
+                br
+                |звонок
+        .header-contacts__information
+            .header-contacts__phone +7 495 2-55-44-66
+            div
+                |(пн-пт с 9 до 18 ч)
+                .header-contacts__messengers
+                    span.header-contacts__icons
+                    | +7 903 111-11-11
+                a(href="mailto:info@homy.ru") info@homy.ru
+    .header-voip
+        .header-voip__header
+            include svg-icon/rub.svg
+            .header-voip__title 
+                span.header-voip__title--orange VoIP решения
+                br
+                |для экономных людей
+        .header-voip__search
+            input(type="text" placeholder="Поиск по сайту").header-voip__search-input
+            button.header-voip__search-button искать
+    .header-basket
+        a(href="/").header-basket__setting
+            .header-basket__icon
+                include svg-icon/basket.svg
+            span
+                .header-basket__title Корзина
+                .header-basket__total 
+                    span.header-basket__amount 4
+                    |  / 4000р.
+        .header-basket__more-setting
+            a(href="/").header-basket__more-setting-link
+                include svg-icon/heart.svg
+                span.header-basket__more-setting-title Избранное
+                span.header-basket__more-setting-count 7
+            a(href="/").header-basket__more-setting-link
+                include svg-icon/compare.svg
+                span.header-basket__more-setting-title Сравнение
+                span.header-basket__more-setting-count 2

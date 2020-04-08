@@ -1,0 +1,17 @@
+section.banner 
+    .banner__inform-line 
+        span.banner__inform-text--bold Более 2000 товаров
+        |  от 40+ производителей в одном магазине. 
+        span.banner__inform-text--blue Любые решения под ключ.
+    .banner-slider
+        #navbtns
+            a(href="#").previous.banner-slider__nav-button.banner-slider__nav-button--left
+                include svg-icon/banner-left-arrow.svg
+            a(href="#").next.banner-slider__nav-button.banner-slider__nav-button--right
+                include svg-icon/banner-right-arrow.svg
+        .banner-slider__items.crsl-items(data-navigation="navbtns")
+            .crsl-wrap
+                - var n = 0
+                while n < 5
+                    .banner-slider__item.crsl-item(=n++)
+                        img(src="flood/banner-image.jpg" alt="")

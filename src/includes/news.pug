@@ -1,0 +1,16 @@
+section.news
+    .news__title 
+        h2 Новости компании
+    .news__items
+        - var n = 0
+        while n < 5
+            .news__item(=n++)
+                .news__information
+                    img(src="/flood/news-image.png" alt="").news__preview
+                    .news__day 20
+                    .news__month марта
+                .news__description 
+                    a(href="/").news__link WiFi точка доступа от компании Grandstream!
+                    p.news__text Уже скоро в продаже!
+
+    a(href="/").news__see-all Все новости

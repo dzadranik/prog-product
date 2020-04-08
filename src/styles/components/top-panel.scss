@@ -80,6 +80,9 @@ $top-link-color: #bcc3c5;
 			z-index: 99;
 			background: rgba(4, 13, 13, 0.89);
 			position: fixed;
+			&.show {
+				display: flex;
+			}
 		}
 		&__link {
 			margin: 0 0 3px;
@@ -93,6 +96,31 @@ $top-link-color: #bcc3c5;
 			display: block;
 			position: relative;
 			background: transparent;
+		}
+	}
+}
+
+.menu-button {
+	display: none;
+	background: transparent;
+	border: none;
+	padding: 5px;
+	@media all and (max-width: 1150px) {
+		display: block;
+		position: absolute;
+		top: 5px;
+		right: 10px;
+		z-index: 99;
+	}
+	&__close {
+		display: none;
+	}
+	&.open {
+		.menu-button__close {
+			display: block;
+		}
+		.menu-button__open {
+			display: none;
 		}
 	}
 }

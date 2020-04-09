@@ -13,12 +13,11 @@ $blue-color: $blue-color;
 		'logo contacts voip basket';
 	grid-gap: 10px;
 	@media all and (max-width: 1150px) {
-		grid-template-columns: auto auto;
+		grid-template-columns: auto auto auto 180px;
 		grid-template-areas:
-			'logo .'
-			'logo region'
-			'logo cabinet'
-			'contacts basket';
+			'logo contacts voip basket'
+			'logo contacts voip region'
+			'logo contacts voip cabinet';
 	}
 }
 
@@ -108,6 +107,13 @@ $blue-color: $blue-color;
 		margin-right: 5px;
 		background: url(/images/header-contacts-icon.png) no-repeat 0 0;
 	}
+
+	@media all and (max-width: 1150px) {
+		justify-content: flex-start;
+		&__call-back {
+			display: none;
+		}
+	}
 }
 
 .header-voip {
@@ -149,8 +155,8 @@ $blue-color: $blue-color;
 		padding: 5px 8px;
 		border-radius: 4px;
 	}
-
-	@media all and (max-width: 1150px) {
+	
+	@media all and (max-width: 900px) {
 		display: none;
 	}
 }
@@ -158,47 +164,60 @@ $blue-color: $blue-color;
 .header-basket {
 	grid-area: basket;
 	padding-top: 15px;
-	&__setting {
-		display: flex;
-		width: 195px;
-		height: 52px;
-		justify-content: flex-start;
-		padding-left: 20px;
-		align-items: center;
-		background: url(../images/basket.png) no-repeat;
-		margin-bottom: 5px;
-		text-decoration: none;
-		color: $default-color;
+	@media all and (min-width: 1150px) {
+		&__button {
+			display: none;
+		}
+		&__setting {
+			display: flex;
+			width: 195px;
+			height: 52px;
+			justify-content: flex-start;
+			padding-left: 20px;
+			align-items: center;
+			background: url(../images/basket.png) no-repeat;
+			margin-bottom: 5px;
+			text-decoration: none;
+			color: $default-color;
+		}
+		&__icon {
+			margin-right: 10px;
+		}
+		&__title {
+			@include roboto;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+		&__amount {
+			color: $blue-color;
+			text-decoration: underline;
+		}
+		&__more-setting {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+		&__more-setting-link {
+			@include border-bottom-dotted;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+		}
+		&__more-setting-title {
+			margin: 0 5px;
+			font-size: 11px;
+			color: #363c3e;
+		}
+		&__more-setting-count {
+			color: $blue-color;
+		}
 	}
-	&__icon {
-		margin-right: 10px;
-	}
-	&__title {
-		@include roboto;
-		text-transform: uppercase;
-		font-weight: 600;
-	}
-	&__amount {
-		color: $blue-color;
-		text-decoration: underline;
-	}
-	&__more-setting {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-	}
-	&__more-setting-link {
-		@include border-bottom-dotted;
-		text-decoration: none;
-		display: flex;
-		align-items: center;
-	}
-	&__more-setting-title {
-		margin: 0 5px;
-		font-size: 11px;
-		color: #363c3e;
-	}
-	&__more-setting-count {
-		color: $blue-color;
+	@media all and (max-width: 1150px) {
+		text-align: right;
+		padding-right: 40px;
+		&__setting,
+		&__more-setting {
+			display: none;
+		}
 	}
 }

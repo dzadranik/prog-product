@@ -2,11 +2,10 @@ $top-link-color: #bcc3c5;
 
 .top-panel {
 	background: $default-color;
+	position: relative;
 	&__links {
+		@include wrapper;
 		display: flex;
-		justify-content: space-between;
-		max-width: 1180px;
-		margin: 0 auto;
 		padding: 10px 20px;
 	}
 	&__link {
@@ -108,7 +107,7 @@ $top-link-color: #bcc3c5;
 	@media all and (max-width: 1150px) {
 		display: block;
 		position: absolute;
-		top: 5px;
+		top: 25px;
 		right: 10px;
 		z-index: 99;
 	}

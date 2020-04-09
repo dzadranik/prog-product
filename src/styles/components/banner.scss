@@ -24,22 +24,91 @@
 }
 
 .banner-slider {
-	max-width: 830px;
-	min-width: 300px;
+	max-width: 100%;
 	position: relative;
 	overflow: hidden;
-	&__items {
-		display: block;
-	}
-	&__nav-button {
+	&__button {
+		@include roboto;
+		text-transform: uppercase;
 		position: absolute;
-		top: calc(50% - 15px);
-		z-index: 9;
-		&--left {
-			left: 20px;
+		left: 8%;
+		top: 73%;
+		background: #fff;
+		padding: 6px 26px 4px;
+		border-radius: 5px;
+		border: none;
+		font-size: 15px;
+		line-height: 26px;
+		color: $blue-color;
+		border-bottom: 3px solid #c4c4c4;
+	}
+}
+
+.rslides {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.rslides li {
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.rslides li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.rslides img {
+	display: block;
+	height: auto;
+	float: left;
+	width: 100%;
+	border: 0;
+}
+.rslides_nav {
+	position: absolute;
+	top: calc(50% - 40px);
+	z-index: 9;
+	width: 16px;
+	height: 44px;
+	display: block;
+	&.next {
+		right: 20px;
+		background: url('../images/banner-right-arrow.svg');
+	}
+	&.prev {
+		left: 20px;
+		background: url('../images/banner-left-arrow.svg');
+	}
+}
+
+.rslides_tabs {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	z-index: 9;
+	display: flex;
+	li {
+		width: 15px;
+		height: 15px;
+		background: $white-color;
+		margin-left: 3px;
+		border-radius: 3px;
+		&.rslides_here {
+			background: $orange-color;
 		}
-		&--right {
-			right: 20px;
-		}
+	}
+	a {
+		color: transparent;
 	}
 }

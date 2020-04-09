@@ -3,6 +3,12 @@
 @mixin roboto {
 	font-family: 'Roboto', sans-serif;
 }
+@mixin wrapper {
+	max-width: 1140px;
+	min-width: 720px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
 
 $default-color: #040d0d;
 $orange-color: #ff5816;
@@ -43,18 +49,17 @@ a {
 }
 
 .wrapper {
-	max-width: 1180px;
-	margin: 0 auto;
+	@include wrapper;
 	padding: 0 20px;
 }
 
 .main {
 	padding: 20px 0;
 	display: grid;
-	grid:  "news banner" /1fr 3fr;
+	grid: 'news banner' /1fr 3fr;
 	grid-column-gap: 30px;
 	@media all and (max-width: 1150px) {
-		grid: "banner" "news";
+		grid: 'banner' 'news';
 	}
 }
 

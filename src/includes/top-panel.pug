@@ -1,0 +1,26 @@
+.top-panel
+    nav.top-panel__links.jq-top-panel
+        .top-panel__link
+            a(href="/") Каталог
+            span.top-panel__link-icon
+                include svg-icon/top-panel-bottom-arrow.svg
+            .top-panel__sub-links
+                each link in topLinks
+                    .top-panel__sub-link
+                        a(href="/") #{link}        
+        .top-panel__link
+            a(href="/") О компании
+            span.top-panel__link-icon
+                include svg-icon/top-panel-bottom-arrow.svg
+            .top-panel__sub-links
+                each link in topLinks
+                    .top-panel__sub-link
+                        a(href="/") #{link}  
+        each link in topLinks
+            .top-panel__link
+                a(href="/") #{link}
+    button.menu-button.jq-menu-button
+        span.menu-button__open
+            include svg-icon/open-menu.svg
+        span.menu-button__close
+            include svg-icon/close-menu.svg

@@ -8,7 +8,7 @@ $(function() {
 		$('.rslides').responsiveSlides({
 			pager: true,
 			nav: true,
-			prevText: '', // String: Text for the "previous" button
+			prevText: '',
 			nextText: ''
 		})
 	})

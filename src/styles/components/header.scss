@@ -13,11 +13,11 @@ $blue-color: $blue-color;
 		'logo contacts voip basket';
 	grid-gap: 10px;
 	@media all and (max-width: 1150px) {
-		grid-template-columns: auto auto auto 180px;
+		grid-template-columns: auto auto auto 110px 60px;
 		grid-template-areas:
-			'logo contacts voip basket'
-			'logo contacts voip region'
-			'logo contacts voip cabinet';
+			'logo contacts voip basket menu'
+			'logo contacts voip region region'
+			'logo contacts voip cabinet cabinet';
 	}
 }
 
@@ -214,14 +214,38 @@ $blue-color: $blue-color;
 	}
 	@media all and (max-width: 1150px) {
 		text-align: right;
-		padding-right: 40px;
+		padding: 0;
 		&__button {
 			background: transparent;
 			border: none;
-			padding: 0;
+			padding: 4px;
 		}
 		&__setting,
 		&__more-setting {
+			display: none;
+		}
+	}
+}
+
+.menu-button {
+	grid-area: menu;
+	display: none;
+	background: transparent;
+	border: none;
+	padding: 5px;
+	@media all and (max-width: 1150px) {
+		display: block;
+		position: relative;
+		z-index: 99;
+	}
+	&__close {
+		display: none;
+	}
+	&.open {
+		.menu-button__close {
+			display: block;
+		}
+		.menu-button__open {
 			display: none;
 		}
 	}

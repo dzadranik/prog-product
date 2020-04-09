@@ -1,5 +1,5 @@
-.top-panel
-    nav.top-panel__links.jq-top-panel
+.top-panel.jq-top-panel
+    nav.top-panel__links
         .top-panel__link
             a(href="/") Каталог
             span.top-panel__link-icon
@@ -19,8 +19,3 @@
         each link in topLinks
             .top-panel__link
                 a(href="/") #{link}
-    button.menu-button.jq-menu-button
-        span.menu-button__open
-            include svg-icon/open-menu.svg
-        span.menu-button__close
-            include svg-icon/close-menu.svg

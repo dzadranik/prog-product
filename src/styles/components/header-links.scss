@@ -1,9 +1,5 @@
-@mixin header-height {
-	height: 55px;
-}
-
 .header-links {
-	@include header-height;
+	height: 48px;
 	background: $orange-color;
 	position: relative;
 	overflow: hidden;
@@ -13,7 +9,6 @@
 	border-radius: 10px;
 	padding-left: 10px;
 	&__link {
-		@include header-height;
 		border-right: 1px solid #ff743d;
 		border-bottom: 3px solid #c44411;
 		white-space: nowrap;
@@ -26,13 +21,12 @@
 		}
 	}
 	a {
-		@include header-height;
 		color: $white-color;
 		font-size: 12px;
 		line-height: 16px;
 		text-decoration: none;
 		display: block;
-		padding: 10px 8px;
+		padding: 8px 7px;
 	}
 	&__more-right,
 	&__more-left {

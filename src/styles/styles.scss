@@ -4,7 +4,7 @@
 	font-family: 'Roboto', sans-serif;
 }
 @mixin wrapper {
-	max-width: 1140px;
+	max-width: 1180px;
 	min-width: 700px;
 	box-sizing: border-box;
 	margin: 0 auto;
@@ -60,8 +60,8 @@ a {
 	padding: 20px 0;
 	display: -ms-grid;
 	display: grid;
-	-ms-grid-columns: 1fr 30px 3fr;
-	grid-template-columns: 1fr 30px 3fr;
+	-ms-grid-columns: 1fr 10px 3fr;
+	grid-template-columns: 1fr 10px 3fr;
 	grid-template-areas: 'news . banner';
 	@media all and (max-width: 1150px) {
 		-ms-grid-columns: 1fr;

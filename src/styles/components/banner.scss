@@ -8,12 +8,12 @@
 	margin-bottom: 20px;
 	&__inform-line {
 		background: #e3e5eb;
-		padding: 10px;
+		padding: 16px 10px;
 		text-align: center;
-		border-radius: 5px;
+		border-radius: 10px;
 		font-size: 16px;
 		font-style: italic;
-		margin-bottom: 25px;
+		margin-bottom: 30px;
 		text-transform: uppercase;
 	}
 	&__inform-text {
@@ -42,10 +42,10 @@
 		text-transform: uppercase;
 		position: absolute;
 		left: 8%;
-		top: 73%;
+		top: 76%;
 		background: #fff;
-		padding: 6px 26px 4px;
-		border-radius: 5px;
+		padding: 8px 32px 4px;
+		border-radius: 7px;
 		border: none;
 		font-size: 15px;
 		line-height: 26px;
@@ -87,7 +87,7 @@
 }
 .rslides_nav {
 	position: absolute;
-	top: calc(50% - 40px);
+	top: calc(50% - 22px);
 	z-index: 9;
 	width: 16px;
 	height: 44px;
@@ -113,7 +113,7 @@
 		height: 15px;
 		background: $white-color;
 		margin-left: 3px;
-		border-radius: 3px;
+		border-radius: 4px;
 		&.rslides_here {
 			background: $orange-color;
 		}

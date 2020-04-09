@@ -6,17 +6,14 @@ $top-link-color: #bcc3c5;
 	&__links {
 		@include wrapper;
 		display: flex;
-		padding: 10px 20px;
+		padding: 11px 20px;
 	}
 	&__link {
-		padding-left: 17px;
+		padding-right: 15px;
 		position: relative;
 		@media all and (min-width: 1150px) {
 			border-right: 1px dotted #323232;
 			flex-grow: 1;
-			&:first-child {
-				padding-left: 0;
-			}
 			&:last-child {
 				border-right: 0;
 				flex-grow: 0;
@@ -31,7 +28,7 @@ $top-link-color: #bcc3c5;
 		}
 	}
 	&__link-icon {
-		padding-left: 15px;
+		padding-left: 9px;
 		display: inline-block;
 		fill: #ff5816;
 		fill-rule: evenodd;
@@ -39,7 +36,7 @@ $top-link-color: #bcc3c5;
 	}
 	&__sub-links {
 		white-space: nowrap;
-		padding: 10px 5px;
+		padding: 11px 5px;
 		@media all and (min-width: 1150px) {
 			display: none;
 			position: absolute;

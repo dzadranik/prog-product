@@ -9,13 +9,11 @@ $top-link-color: #bcc3c5;
 		padding: 11px 20px;
 	}
 	&__link {
-		padding-right: 15px;
 		position: relative;
 		@media all and (min-width: 1150px) {
-			border-right: 1px dotted #323232;
 			flex-grow: 1;
 			&:last-child {
-				border-right: 0;
+				padding-right: 15px;
 				flex-grow: 0;
 			}
 		}

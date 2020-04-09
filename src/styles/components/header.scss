@@ -149,6 +149,7 @@ $blue-color: $blue-color;
 	-ms-grid-row: 2;
 	grid-area: voip;
 	margin-top: 4px;
+	@include roboto;
 	&__header {
 		text-transform: uppercase;
 		display: flex;
@@ -161,7 +162,6 @@ $blue-color: $blue-color;
 		line-height: 18px;
 		margin-left: 5px;
 		&--orange {
-			@include roboto;
 			color: $orange-color;
 			font-size: 17px;
 		}

@@ -52,7 +52,7 @@ $top-link-color: #bcc3c5;
 	}
 	@media all and (min-width: 1150px) {
 		&__link:hover {
-			&:first-child .top-panel__sub-links {
+			.top-panel__sub-links {
 				left: -15px;
 			}
 			.top-panel__sub-links {

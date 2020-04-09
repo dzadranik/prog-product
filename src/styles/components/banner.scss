@@ -1,4 +1,8 @@
 .banner {
+	-ms-grid-row: 1;
+	grid-row: 1;
+	-ms-grid-column: 3;
+	grid-column: 3;
 	grid-area: banner;
 	display: block;
 	margin-bottom: 20px;
@@ -20,6 +24,12 @@
 		&--bold {
 			@include roboto;
 		}
+	}
+	@media all and (max-width: 1150px) {
+		-ms-grid-row: 1;
+		grid-row: 1;
+		-ms-grid-column: 1;
+		grid-column: 1;
 	}
 }
 

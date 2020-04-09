@@ -1,4 +1,8 @@
 .news {
+	-ms-grid-row: 1;
+	grid-row: 1;
+	-ms-grid-column: 1;
+	grid-column: 1;
 	grid-area: news;
 	&__title {
 		padding: 5px 0 5px 0;
@@ -54,6 +58,10 @@
 	}
 
 	@media all and (max-width: 1150px) {
+		-ms-grid-row: 2;
+		grid-row: 2;
+		-ms-grid-column: 1;
+		grid-column: 1;
 		&__items {
 			grid: auto/1fr 1fr 1fr;
 			grid-gap: 10px;

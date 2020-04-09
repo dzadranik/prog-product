@@ -8,23 +8,25 @@ $blue-color: $blue-color;
 	padding: 15px 0;
 	display: -ms-grid;
 	display: grid;
-	-ms-grid-columns: 208px auto auto 208px;
-	grid-template-columns: 208px auto auto 208px;
+	justify-content: space-between;
+	-ms-grid-columns: 208px 10px auto 10px auto 10px 208px;
+	grid-template-columns: 208px 10px auto 10px auto 10px 208px;
 	grid-template-areas:
-		'region . . cabinet'
-		'logo contacts voip basket';
-	grid-gap: 10px;
+		'region . . . . . cabinet'
+		'logo . contacts . voip . basket';
 	@media all and (max-width: 1150px) {
-		-ms-grid-columns: auto auto auto 110px 60px;
-		grid-template-columns: auto auto auto 110px 60px;
+		-ms-grid-columns: auto 10px auto 10px auto 10px 110px 60px;
+		grid-template-columns: auto 10px auto 10px auto 10px 110px 60px;
 		grid-template-areas:
-			'logo contacts voip basket menu'
-			'logo contacts voip region region'
-			'logo contacts voip cabinet cabinet';
+			'logo . contacts . voip . basket menu'
+			'logo . contacts . voip . region region'
+			'logo . contacts . voip . cabinet cabinet';
 	}
 }
 
 .header-region {
+	-ms-grid-column: 1;
+	-ms-grid-row: 1;
 	grid-area: region;
 	&__choose {
 		@include border-bottom-dotted;
@@ -36,13 +38,17 @@ $blue-color: $blue-color;
 		padding: 0;
 		margin-left: 10px;
 	}
-
 	@media all and (max-width: 1150px) {
+		-ms-grid-column: 7;
+		-ms-grid-column-span: 2;
+		-ms-grid-row: 2;
 		text-align: right;
 	}
 }
 
 .header-to-cabinet {
+	-ms-grid-column: 7;
+	-ms-grid-row: 1;
 	grid-area: cabinet;
 	text-align: right;
 	a {
@@ -54,9 +60,16 @@ $blue-color: $blue-color;
 			border-bottom-color: transparent;
 		}
 	}
+	@media all and (max-width: 1150px) {
+		-ms-grid-column: 7;
+		-ms-grid-column-span: 2;
+		-ms-grid-row: 3;
+	}
 }
 
 .header__logo {
+	-ms-grid-column: 1;
+	-ms-grid-row: 2;
 	grid-area: logo;
 	height: 63px;
 	width: 198px;
@@ -64,9 +77,16 @@ $blue-color: $blue-color;
 	background-size: contain;
 	display: inline-block;
 	margin-top: 10px;
+	@media all and (max-width: 1150px) {
+		-ms-grid-column: 1;
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 3;
+	}
 }
 
 .header-contacts {
+	-ms-grid-column: 3;
+	-ms-grid-row: 2;
 	grid-area: contacts;
 	display: flex;
 	justify-content: center;
@@ -112,6 +132,9 @@ $blue-color: $blue-color;
 	}
 
 	@media all and (max-width: 1150px) {
+		-ms-grid-column: 3;
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 3;
 		justify-content: flex-start;
 		&__call-back {
 			display: none;
@@ -120,6 +143,8 @@ $blue-color: $blue-color;
 }
 
 .header-voip {
+	-ms-grid-column: 5;
+	-ms-grid-row: 2;
 	grid-area: voip;
 	&__header {
 		text-transform: uppercase;
@@ -158,6 +183,11 @@ $blue-color: $blue-color;
 		padding: 5px 8px;
 		border-radius: 4px;
 	}
+	@media all and (max-width: 1150px) {
+		-ms-grid-column: 5;
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 3;
+	}
 
 	@media all and (max-width: 900px) {
 		display: none;
@@ -165,6 +195,8 @@ $blue-color: $blue-color;
 }
 
 .header-basket {
+	-ms-grid-column: 7;
+	-ms-grid-row: 2;
 	grid-area: basket;
 	padding-top: 15px;
 	@media all and (min-width: 1150px) {
@@ -216,6 +248,8 @@ $blue-color: $blue-color;
 		}
 	}
 	@media all and (max-width: 1150px) {
+		-ms-grid-column: 7;
+		-ms-grid-row: 1;
 		text-align: right;
 		padding: 0;
 		&__button {
@@ -251,5 +285,9 @@ $blue-color: $blue-color;
 		.menu-button__open {
 			display: none;
 		}
+	}
+	@media all and (max-width: 1150px) {
+		-ms-grid-column: 9;
+		-ms-grid-row: 1;
 	}
 }

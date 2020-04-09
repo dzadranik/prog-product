@@ -6,13 +6,16 @@ $blue-color: $blue-color;
 
 .header {
 	padding: 15px 0;
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: 208px auto auto 208px;
 	grid-template-columns: 208px auto auto 208px;
 	grid-template-areas:
 		'region . . cabinet'
 		'logo contacts voip basket';
 	grid-gap: 10px;
 	@media all and (max-width: 1150px) {
+		-ms-grid-columns: auto auto auto 110px 60px;
 		grid-template-columns: auto auto auto 110px 60px;
 		grid-template-areas:
 			'logo contacts voip basket menu'
